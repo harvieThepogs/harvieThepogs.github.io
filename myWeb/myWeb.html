@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hotel Website</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url('Canyon-Boracay.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        background: blue;
+        color: white;
+        padding: 30px 20px;
+        font-size: 32px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    img {
+	margin-bottom: 20px;
+        max-width: 100%;
+        height: 100%;
+        object-fit: cover;     
+}
+
+    .container1, .container2 {
+        border-radius: 10px;
+        width: 400px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+    }
+
+    .container1 {
+        border: 2px solid red;
+	margin-bottom: 20px;
+	
+    }
+
+    .container2 {
+        border: 2px solid blue;
+	margin-bottom: 20px;
+    }
+
+    nav {
+        background-color: gray;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 10px 0;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    main {
+        padding: 40px;
+        text-align: center;
+    }
+    h1 {
+	color: white;
+  	font-size: 4rem;
+  	font-weight: 800;
+  	text-shadow: 0 4px 12px rgba(0,0,0,0.6);
+    }
+    button {
+  	background: #007BFF;
+  	color: white;
+	margin-top: 20px	
+  	padding: 10px 20px;
+  	border: none;
+  	border-radius: 25px;
+  	font-size: 30px;
+  	cursor: pointer;
+	gap: 20px;
+	}
+    btn {
+	margin-top: 20px;
+	}
+	
+
+    footer {
+        background-color: blue;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+   #hiddenImage {
+	border-radius: 200px;
+    	display: none;
+    	position: fixed;
+    	top: 50%;
+    	left: 50%;
+    	transform: translate(-50%, -50%); /* perfect center */
+    	width: 600;
+	height: 400;
+    	border-radius: 10px;
+    	box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    	z-index: 1000;
+   }
+   #overlay {
+     
+     display: none;
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(0,0,0,0.6);
+     z-index: 999;
+   }
+</style>
+</head>
+
+<body>
+
+<header>
+    Canyon Hotel & Resort Boracay
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<main>
+    <h1>Welcome!</h1>
+
+    <div style="display: flex; justify-content: center; gap: 50px; align-items: center;">
+        
+        <div class="container1">
+            <img src="C:\Users\MIS-SUP\Desktop\myWeb\image\logo HOTEL .jpg" alt="Hotel Logo">
+        </div>
+
+        <div class="container2">
+            <img src="C:\Users\MIS-SUP\Desktop\myWeb\image\TSB.jpg" alt="Station Logo">
+        </div>
+    	</div>
+	<div class ="btn">
+	<button onclick="showImage()">Click Me</button>
+	</div>
+	<div id="overlay">
+	<img id="hiddenImage" src="C:\Users\MIS-SUP\Desktop\myWeb\image\haha.jpg">
+	</div>
+</main>
+
+<script>
+function showImage() {
+    document.getElementById("hiddenImage").style.display = "block";
+    document.getElementById("overlay").style.display = "block";
+}
+</script>
+</body>
+</html>
